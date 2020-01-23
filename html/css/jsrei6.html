@@ -1,0 +1,33 @@
+<!doctype html>
+<HTML>
+<HEAD>
+<TITLE>合計・平均計算</TITLE>
+</HEAD>
+<BODY><SCRIPT language="JavaScript">
+<!--
+function goukei(xx){
+    a = 0;
+    cnt = 0;    // 個数用
+    for(n = 0; n < xx.dat.length; ++n)
+        if(!isNaN(parseInt(xx.dat[n].value))){
+            a = a + parseInt(xx.dat[n].value);
+            ++cnt;    // 個数カウント
+        }
+    xx.sum.value = a;    // 合計
+    xx.ave.value = a / cnt;    // 平均
+}
+//-->
+</SCRIPT>
+<H3>合計計算のページ</H3>
+<FORM name="fk">データ<BR>
+1.<INPUT size="20" type="text" name="dat"><BR>
+2.<INPUT size="20" type="text" name="dat"><BR>
+3.<INPUT size="20" type="text" name="dat"><BR>
+4.<INPUT size="20" type="text" name="dat"><BR>
+5.<INPUT size="20" type="text" name="dat"><BR>
+合計 = <INPUT size="20" type="text" name="sum">
+平均 = <INPUT size="20" type="text" name="ave">
+<INPUT type="button" value="計算開始" onclick="goukei(document.fk);">
+</FORM>
+</BODY>
+</HTML>
